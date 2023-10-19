@@ -1,0 +1,26 @@
+import { FC, useState } from 'react';
+import { cssUtil } from '@/utils/cssUtil';
+import { {{component}}Props } from './types';
+
+/*
+ * @description Brief description of the component
+ * @param props.input [Brief description of component prop]
+ * ...
+ * Pass in the component props type using the react FC type
+ */
+const {{component}}: FC<{{component}}Props> = ({ /* destructure component props */ }) => {
+  // useState hook should be used to set and track state changes
+  const [dyn, setDyn] = useState<string>('');
+
+  // cssUtil helps to set a list of classes on elements, this becomes especially useful for setting dynamic classes based on state changes
+  const rootCssClass = cssUtil([ dyn ? 'dynamic-css-class' : '', 'static-css-class' ]);
+
+  // finally return markup
+  return (
+    <div className={rootCssClass}>
+      {/* children components */}
+    </div>
+  );
+};
+
+export default {{component}};

@@ -1,0 +1,27 @@
+import { Meta, StoryFn } from '@storybook/react';
+import {{component}} from '@/components/{{component}}/{{component}}';
+
+// Not sure what a story is? https://storybook.js.org/docs/react/get-started/whats-a-story
+
+// Set the stories meta data for this component
+const meta: Meta<typeof {{component}}> = {
+  title: '{{component}}',
+  component: {{component}},
+};
+
+// Create a template that wraps the component, which simply passes in the prop values defined below
+const Template: StoryFn<typeof {{component}}> = (args) => <{{component}} {...args} />;
+
+export const Default = Template.bind({});
+
+/*
+ * Args get passed to the component, as seen above.
+ * You can think of these as component props.
+ */
+Default.args = {
+  // ...
+};
+
+// you can add more variants below here
+
+export default meta;

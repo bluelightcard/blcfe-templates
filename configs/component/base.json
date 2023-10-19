@@ -1,0 +1,18 @@
+[
+  {
+    "out": "{{component}}.tsx",
+    "file": "component/base/component.tmpl"
+  },
+  {
+    "out": "{{component}}.stories.tsx",
+    "file": "component/base/component-stories.tmpl"
+  },
+  {
+    "out": "Docs.md",
+    "file": "component/base/docs.tmpl"
+  },
+  {
+    "out": "types.ts",
+    "file": "component/base/types.tmpl"
+  }
+]
