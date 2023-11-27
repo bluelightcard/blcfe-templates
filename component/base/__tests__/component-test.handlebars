@@ -1,0 +1,17 @@
+import { render } from '@testing-library/react';
+import {{component}} from '{{path.component}}{{component}}/{{component}}';
+import { {{component}}Props } from '{{path.component}}{{component}}/types';
+
+describe('{{component}} component', () => {
+  let props: {{component}}Props;
+
+  beforeEach(() => {
+    props = {};
+  });
+
+  describe('smoke test', () => {
+    it('should render component without error', () => {
+      render(<{{component}} {...props} />);
+    });
+  });
+});

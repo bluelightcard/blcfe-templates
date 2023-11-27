@@ -1,18 +1,22 @@
 [
   {
     "out": "{{component}}.tsx",
-    "file": "component/base/component.tmpl"
+    "file": "component/base/component.handlebars"
   },
   {
     "out": "{{component}}.stories.tsx",
-    "file": "component/base/component-stories.tmpl"
+    "file": "component/base/component-stories.handlebars"
   },
   {
     "out": "Docs.md",
-    "file": "component/base/docs.tmpl"
+    "file": "component/base/docs.handlebars"
   },
   {
     "out": "types.ts",
-    "file": "component/base/types.tmpl"
+    "file": "component/base/types.handlebars"
+  },
+  {
+    "out": "../__tests__/{{component}}/{{component}}.test.tsx",
+    "file": "component/base/__tests__/component-test.handlebars"
   }
 ]

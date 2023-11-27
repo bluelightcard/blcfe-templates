@@ -1,14 +1,9 @@
 import { Meta, StoryFn } from '@storybook/react';
+import { ArgTypes, Markdown, Primary, Stories, Title } from '@storybook/addon-docs';
 import {{component}} from './{{component}}';
 import Docs from './Docs.md?raw';
 
 // Not sure what a story is? https://storybook.js.org/docs/react/get-started/whats-a-story
-
-// Set the stories meta data for this component
-const meta: Meta<typeof {{component}}> = {
-  title: '{{component}}',
-  component: {{component}},
-};
 
 // Create a template that wraps the component, which simply passes in the prop values defined below
 const Template: StoryFn<typeof {{component}}> = (args) => <{{component}} {...args} />;
@@ -24,5 +19,25 @@ Default.args = {
 };
 
 // you can add more variants below here
+// ...
+
+// Set the stories meta data for this component
+const meta: Meta<typeof {{component}}> = {
+  title: '{{component}}',
+  component: {{component}},
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Title />
+          <Markdown>{Docs}</Markdown>
+          <Primary />
+          <ArgTypes />
+          <Stories />
+        </>
+      ),
+    },
+  },
+};
 
 export default meta;
